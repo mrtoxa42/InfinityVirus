@@ -5,15 +5,18 @@ extends Node2D
 var virusarea = false
 var currentvirus
 
+
 func _ready():
 	#get_tree().get_root().set_transparent_background(true)
+	GameManager.load_game()
 	GameManager.screenmiddle = $MiddleMarker.global_position
 
 
 
 
 func _process(delta):
-	$Score/ScoreLabel.text = str(GameManager.score)
+	$Score/ScoreLabel.text = str(GameManager.score) 
+	#$Score/ScoreLabel.text = "kanğahğgak"
 	
 
 
@@ -36,3 +39,7 @@ func Virus_damage():
 	if virusarea == true:
 		GameManager.score -=1
 		Virus_damage()
+
+
+func _on_save_timer_timeout():
+	GameManager.save_game()
