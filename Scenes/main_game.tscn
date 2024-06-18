@@ -1,3 +1,60 @@
-[gd_scene format=3 uid="uid://yndktndmtvxr"]
+[gd_scene load_steps=4 format=3 uid="uid://yndktndmtvxr"]
+
+[ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_i3i0d"]
+[ext_resource type="PackedScene" uid="uid://cr0vny2l6ouus" path="res://Scenes/virus_spawner.tscn" id="2_tqwuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw0ti"]
+size = Vector2(139.5, 95)
 
 [node name="MainGame" type="Node2D"]
+script = ExtResource("1_i3i0d")
+
+[node name="VirusSpawner" parent="." instance=ExtResource("2_tqwuh")]
+position = Vector2(-13, 6)
+
+[node name="VirusSpawner2" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(771, 1105)
+
+[node name="VirusSpawner3" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(-42, 1095)
+
+[node name="VirusSpawner4" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(757, 7)
+
+[node name="VirusSpawner5" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(755, 451)
+
+[node name="VirusSpawner6" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(-34, 481)
+
+[node name="VirusSpawner7" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(353, 1127)
+
+[node name="VirusSpawner8" parent="VirusSpawner" instance=ExtResource("2_tqwuh")]
+position = Vector2(374, -35)
+
+[node name="MiddleMarker" type="Marker2D" parent="."]
+position = Vector2(360, 540)
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="Score"]
+modulate = Color(0.572988, 0.572988, 0.572988, 0.388235)
+offset_left = 248.0
+offset_top = 444.0
+offset_right = 461.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 124
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreArea" type="Area2D" parent="Score"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score/ScoreArea"]
+position = Vector2(357, 533)
+shape = SubResource("RectangleShape2D_fw0ti")
+
+[connection signal="area_entered" from="Score/ScoreArea" to="." method="_on_score_area_area_entered"]
+[connection signal="area_exited" from="Score/ScoreArea" to="." method="_on_score_area_area_exited"]

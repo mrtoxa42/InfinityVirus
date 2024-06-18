@@ -1,3 +1,137 @@
-[gd_scene format=3 uid="uid://q6rp4gr02dq6"]
+[gd_scene load_steps=52 format=3 uid="uid://q6rp4gr02dq6"]
 
-[node name="Virus" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://8fq3oj404hng" path="res://Assets/classic/coronavirus-classic-idle1_00.png" id="1_0ow2h"]
+[ext_resource type="Script" path="res://Scripts/virus.gd" id="1_p0xdo"]
+[ext_resource type="Texture2D" uid="uid://clyptiveiwrtr" path="res://Assets/classic/coronavirus-classic-attack_0.png" id="2_th5v2"]
+[ext_resource type="Texture2D" uid="uid://cqsml6w4mcln8" path="res://Assets/classic/coronavirus-classic-idle1_01.png" id="2_tuw7k"]
+[ext_resource type="Texture2D" uid="uid://c2b3ucwtraahu" path="res://Assets/classic/coronavirus-classic-idle1_02.png" id="3_3pqcj"]
+[ext_resource type="Texture2D" uid="uid://1o6gpivqk7r8" path="res://Assets/classic/coronavirus-classic-idle1_03.png" id="4_spsep"]
+[ext_resource type="Texture2D" uid="uid://ner4w1apbqce" path="res://Assets/classic/coronavirus-classic-idle1_04.png" id="5_61fb8"]
+[ext_resource type="Texture2D" uid="uid://chgb8nx8g3rnu" path="res://Assets/classic/coronavirus-classic-idle1_05.png" id="6_12nwq"]
+[ext_resource type="Texture2D" uid="uid://bcg8ju6j8j5mw" path="res://Assets/classic/coronavirus-classic-idle1_06.png" id="7_c7try"]
+[ext_resource type="Texture2D" uid="uid://dfd285c6kle7e" path="res://Assets/classic/coronavirus-classic-idle1_07.png" id="8_kvn2s"]
+[ext_resource type="Texture2D" uid="uid://bxd5sf6ti2sy7" path="res://Assets/classic/coronavirus-classic-idle1_08.png" id="9_ew3qu"]
+[ext_resource type="Texture2D" uid="uid://cabewepuronqa" path="res://Assets/classic/coronavirus-classic-idle1_09.png" id="10_akckf"]
+[ext_resource type="Texture2D" uid="uid://c003htnpfnw48" path="res://Assets/classic/coronavirus-classic-idle1_10.png" id="11_dbr81"]
+[ext_resource type="Texture2D" uid="uid://dmeqymc0e0bde" path="res://Assets/classic/coronavirus-classic-idle1_11.png" id="12_kbx4c"]
+[ext_resource type="Texture2D" uid="uid://de30cywkghg31" path="res://Assets/classic/coronavirus-classic-idle1_12.png" id="13_tjjwr"]
+[ext_resource type="Texture2D" uid="uid://budijky5451t8" path="res://Assets/classic/coronavirus-classic-idle1_13.png" id="14_jh8xo"]
+[ext_resource type="Texture2D" uid="uid://d0a4lb4ejl4c4" path="res://Assets/classic/coronavirus-classic-idle1_14.png" id="15_kxap2"]
+[ext_resource type="Texture2D" uid="uid://p5ls60e5n67" path="res://Assets/classic/coronavirus-classic-idle1_15.png" id="16_vnqhl"]
+[ext_resource type="Texture2D" uid="uid://ddvaxhmojx4qx" path="res://Assets/classic/coronavirus-classic-idle1_17.png" id="17_3rqcs"]
+[ext_resource type="Texture2D" uid="uid://bbl48ipsn8kx3" path="res://Assets/classic/coronavirus-classic-idle1_18.png" id="18_xqkas"]
+[ext_resource type="Texture2D" uid="uid://wmm6s7pygpxq" path="res://Assets/classic/coronavirus-classic-idle1_19.png" id="19_hb51f"]
+[ext_resource type="Texture2D" uid="uid://cjcl60ltloglt" path="res://Assets/classic/coronavirus-classic-idle1_20.png" id="20_evrk0"]
+[ext_resource type="Texture2D" uid="uid://c08jqapr2ff6k" path="res://Assets/classic/coronavirus-classic-idle1_21.png" id="21_ey3h4"]
+[ext_resource type="Texture2D" uid="uid://dc0nqoaqd5h70" path="res://Assets/classic/coronavirus-classic-idle1_22.png" id="22_c7ete"]
+[ext_resource type="Texture2D" uid="uid://4fa70fi6nc1r" path="res://Assets/classic/coronavirus-classic-idle1_23.png" id="23_22acb"]
+[ext_resource type="Texture2D" uid="uid://bca0ymnsimkan" path="res://Assets/classic/coronavirus-classic-idle1_24.png" id="24_aa44u"]
+[ext_resource type="Texture2D" uid="uid://dgqle05j3louh" path="res://Assets/classic/coronavirus-classic-idle1_25.png" id="25_xxgl7"]
+[ext_resource type="Texture2D" uid="uid://qp46t33ln5yf" path="res://Assets/classic/coronavirus-classic-idle1_26.png" id="26_j8y0c"]
+[ext_resource type="Texture2D" uid="uid://c4wq5mutbfotf" path="res://Assets/classic/coronavirus-classic-death_00.png" id="29_6cu07"]
+[ext_resource type="Texture2D" uid="uid://ota1hcpaye2j" path="res://Assets/classic/coronavirus-classic-death_01.png" id="30_pecq7"]
+[ext_resource type="Texture2D" uid="uid://dc0mc48n8yo0t" path="res://Assets/classic/coronavirus-classic-death_02.png" id="31_trrae"]
+[ext_resource type="Texture2D" uid="uid://culvxwap8c5r2" path="res://Assets/classic/coronavirus-classic-death_03.png" id="32_5rqug"]
+[ext_resource type="Texture2D" uid="uid://cw116dibp0j5m" path="res://Assets/classic/coronavirus-classic-death_04.png" id="33_2onuy"]
+[ext_resource type="Texture2D" uid="uid://c03v5s7m5afmq" path="res://Assets/classic/coronavirus-classic-death_05.png" id="34_arsqm"]
+[ext_resource type="Texture2D" uid="uid://d3npy2nterm3m" path="res://Assets/classic/coronavirus-classic-death_10.png" id="35_mpdwg"]
+[ext_resource type="Texture2D" uid="uid://b4emhh3bmn8ac" path="res://Assets/classic/coronavirus-classic-death_11.png" id="36_qihme"]
+[ext_resource type="Texture2D" uid="uid://dirkt5t26wt11" path="res://Assets/classic/coronavirus-classic-death_12.png" id="37_s33tk"]
+[ext_resource type="Texture2D" uid="uid://cm47vmq7rjbyf" path="res://Assets/classic/coronavirus-classic-death_13.png" id="38_jglj2"]
+[ext_resource type="Texture2D" uid="uid://g2icafqiyhdm" path="res://Assets/classic/coronavirus-classic-death_14.png" id="39_kpomk"]
+[ext_resource type="Texture2D" uid="uid://dp73mtmt26vk3" path="res://Assets/classic/coronavirus-classic-death_15.png" id="40_4wric"]
+[ext_resource type="Texture2D" uid="uid://dh32i7edxxadb" path="res://Assets/classic/coronavirus-classic-death_17.png" id="41_b0wmt"]
+[ext_resource type="Texture2D" uid="uid://ckko5o0vqcc4r" path="res://Assets/classic/coronavirus-classic-death_18.png" id="42_1x081"]
+[ext_resource type="Texture2D" uid="uid://cjhiw3uwwyarq" path="res://Assets/classic/coronavirus-classic-death_19.png" id="43_kwgd1"]
+[ext_resource type="Texture2D" uid="uid://cv7up27igst06" path="res://Assets/classic/coronavirus-classic-death_06.png" id="44_0oufd"]
+[ext_resource type="Texture2D" uid="uid://dfrf0f1y6hi6r" path="res://Assets/classic/coronavirus-classic-death_08.png" id="45_iy0n0"]
+[ext_resource type="Texture2D" uid="uid://6mm2vdw5fpxy" path="res://Assets/classic/coronavirus-classic-death_09.png" id="46_t4uq6"]
+
+[sub_resource type="Animation" id="Animation_mk5km"]
+resource_name = "Death"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("29_6cu07"), ExtResource("30_pecq7"), ExtResource("31_trrae"), ExtResource("32_5rqug"), ExtResource("33_2onuy"), ExtResource("34_arsqm"), ExtResource("35_mpdwg"), ExtResource("36_qihme"), ExtResource("37_s33tk"), ExtResource("38_jglj2"), ExtResource("39_kpomk"), ExtResource("40_4wric"), ExtResource("41_b0wmt"), ExtResource("42_1x081"), ExtResource("43_kwgd1"), ExtResource("44_0oufd"), ExtResource("45_iy0n0"), ExtResource("46_t4uq6"), ExtResource("35_mpdwg")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_71qpc"]
+resource_name = "Idle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_0ow2h"), ExtResource("2_tuw7k"), ExtResource("3_3pqcj"), ExtResource("4_spsep"), ExtResource("5_61fb8"), ExtResource("6_12nwq"), ExtResource("7_c7try"), ExtResource("8_kvn2s"), ExtResource("9_ew3qu"), ExtResource("10_akckf"), ExtResource("11_dbr81"), ExtResource("12_kbx4c"), ExtResource("13_tjjwr"), ExtResource("14_jh8xo"), ExtResource("15_kxap2"), ExtResource("16_vnqhl"), ExtResource("17_3rqcs"), ExtResource("18_xqkas"), ExtResource("19_hb51f"), ExtResource("20_evrk0"), ExtResource("21_ey3h4"), ExtResource("22_c7ete"), ExtResource("23_22acb"), ExtResource("24_aa44u"), ExtResource("25_xxgl7"), ExtResource("26_j8y0c")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_460rm"]
+_data = {
+"Death": SubResource("Animation_mk5km"),
+"Idle": SubResource("Animation_71qpc")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tw2jd"]
+radius = 169.047
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_blg70"]
+radius = 112.178
+
+[node name="Virus" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_p0xdo")
+
+[node name="TouchButton" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0.00392157)
+position = Vector2(-237, -234)
+texture_normal = ExtResource("2_th5v2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_460rm")
+}
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tw2jd")
+
+[node name="VirusArea" type="Area2D" parent="." groups=["Virus"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VirusArea"]
+shape = SubResource("CircleShape2D_blg70")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("43_kwgd1")
+
+[connection signal="pressed" from="TouchButton" to="." method="_on_touch_button_pressed"]
