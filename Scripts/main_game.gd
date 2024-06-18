@@ -6,7 +6,7 @@ var virusarea = false
 var currentvirus
 
 func _ready():
-	get_tree().get_root().set_transparent_background(true)
+	#get_tree().get_root().set_transparent_background(true)
 	GameManager.screenmiddle = $MiddleMarker.global_position
 
 

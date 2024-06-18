@@ -24,10 +24,10 @@ GameManager="*res://Scripts/GameManager.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1080
-window/size/transparent=true
+window/size/borderless=true
+window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
-window/per_pixel_transparency/allowed=true
 window/handheld/orientation=1
 
 [input_devices]
@@ -38,7 +38,6 @@ pointing/emulate_touch_from_mouse=true
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
-reflections/sky_reflections/texture_array_reflections.mobile=true
 environment/defaults/default_clear_color=Color(0.301961, 0.301961, 0.301961, 0)
-viewport/transparent_background=true
